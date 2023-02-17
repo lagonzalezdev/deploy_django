@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--required meta tags-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
+        <title>LaGonzalezDev.portfolio</title>
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+            rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <!--css-->
+            <link rel="stylesheet" href="{% static 'main.css' %}">
+    </head>
+    <body>
+        {% include 'partials/navbar.html'%}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        {% block content %}
+        {% endblock %}
+        
+        <footer >
+            <a href="https://www.linkedin.com/in/lagonzalezdev/" target="_blank"><img src="{%static 'portfolio/linkedin.png'%}"  class="img-fluid" alt="linkedin logo"></a>
+            <a href="https://github.com/lagonzalezdev" target="_blank"><img src="{%static 'portfolio/github.png' %}" class="img-fluid" alt="github logo"></a>
+            <a href="mailto:lagonzalezdevgmail.com" target="_blank"><img src="{%static 'portfolio/mail.png'%}" alt="mail logo"></a>
+            <p> Designed and build by #lagonzalezdev </p>
+        </footer>
+
+    </body>
+    </html>
